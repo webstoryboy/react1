@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import ImgText from "./components/ImgText";
+import Image from "./components/Image";
+import Card from "./components/Card";
+import Banner from "./components/Banner";
+import Text from "./components/Text";
+import Footer from "./components/Footer";
+import Contents from "./components/Contents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header fonts="nexon" />
+      <Contents>
+        <Slider fonts={["slider__wrap", "nexon"]} />
+        <Image skill={["section", "nexon"]} />
+        <ImgText skill={["section", "nexon", "gray"]} />
+        <Card skill={["section", "nexon"]} />
+        <Banner skill={["section", "gmarket"]} />
+        <Text skill={["section", "nexon"]} />
+      </Contents>
+      <Footer skill={["section", "nexon", "gray"]} />
+    </>
   );
 }
 
